@@ -106,6 +106,15 @@
         align-self: center;
     }
 
+    .logo-container h2 {
+        text-align: initial;
+        font-size: 3.6rem;
+    }
+
+    .logo-container img {
+        height: 100%;
+    }
+
     .hero-image {
         grid-area: hero;
         justify-self: end;
