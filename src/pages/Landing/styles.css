@@ -74,4 +74,50 @@
     background-color: var(--color-secundary-dark);
 }
 
+.total-connections {
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-complement);
+}
+
+.total-connections img {
+    margin-left: 0.8rem;
+}
+
+@media (min-width: 1100px) {
+    #page-landing {
+        max-width: 1100px;
+    }
+
+    .logo-container {
+        grid-area: logo;
+        text-align: left;
+        margin: 0;
+        align-self: center;
+    }
+
+    .hero-image {
+        grid-area: hero;
+        justify-self: end;
+    }
+
+    .buttons-container {
+        grid-area: buttons;
+        justify-content: flex-start;
+    }
+
+    .total-connections {
+        grid-area: total;
+        justify-self: end;
+    }
+
+    .buttons-container a {
+        font-size: 2.4rem;
+    }
+}
+
+
+
 
