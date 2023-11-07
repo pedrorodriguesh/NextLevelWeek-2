@@ -13,7 +13,6 @@ function TeacherList() {
 				<div className='top-bar-container'>
 					<Link to='/'>
 						<img src={backIcon} alt='voltar' />
-						Voltar
 					</Link>
 
 					<img src={logoImg} alt='logo-proffy' />
