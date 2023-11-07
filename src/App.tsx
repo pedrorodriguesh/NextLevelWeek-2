@@ -1,4 +1,3 @@
-import Landing from './pages/Landing';
 import AppRoutes from './routes';
 
 import './assets/styles/global.css';

@@ -1,9 +1,13 @@
+/* eslint-disable @typescript-eslint/object-curly-spacing */
 // Import de imagens no React é por meio de "variáveis"
 import giveClassesIcon from '../../assets/images/icons/give-classes.svg';
 import purpleHeartIcon from '../../assets/images/icons/purple-heart.svg';
 import studyIcon from '../../assets/images/icons/study.svg';
 import landingImg from '../../assets/images/landing.svg';
 import logoImg from '../../assets/images/logo.svg';
+
+// Import para fazer o roteamento de pages.
+import { Link } from 'react-router-dom';
 
 import './styles.css';
 
@@ -20,15 +24,15 @@ function Landing() {
 				<img src={landingImg} alt='imagem-plataforma-de-estudos' className='hero-image' />
 
 				<div className='buttons-container'>
-					<a href='/teachers' className='study'>
+					<Link to='/teachers' className='study'>
 						<img src={studyIcon} alt='estudar' />
                         Estudar
-					</a>
+					</Link>
 
-					<a href='/give-classes' className='give-classes'>
+					<Link to='/give-classes' className='give-classes'>
 						<img src={giveClassesIcon} alt='dar aula' />
                         Dar aula
-					</a>
+					</Link>
 				</div>
 
 				<span className='total-connections'>
