@@ -2,11 +2,13 @@
 /* eslint-disable @typescript-eslint/object-curly-spacing */
 import { Link } from 'react-router-dom';
 
+// Imagens setadas como variáveis
 import backIcon from '../../assets/images/icons/back.svg';
 import logoImg from '../../assets/images/logo.svg';
 
 import './styles.css';
 
+// Tipando as propriedades do componente
 type PageHeaderProps = {
 	title: string;
 	children?: React.ReactNode;
