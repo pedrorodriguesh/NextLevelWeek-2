@@ -1,6 +1,8 @@
 import PageHeader from '../../components/PageHeader';
 import './styles.css';
 
+import whatsapp from '../../assets/images/icons/whatsapp.svg';
+
 function TeacherList() {
 	return (
 		<div id='page-teacher-list' className='container'>
@@ -39,6 +41,17 @@ function TeacherList() {
 						<br />
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, voluptatibus.
 					</p>
+
+					<footer>
+						<p>
+							Preço/hora
+							<strong>R$100,00</strong>
+						</p>
+						<button type='button'>
+							<img src={whatsapp} alt='whatsapp icon' />
+							Whatsapp
+						</button>
+					</footer>
 				</article>
 			</main>
 		</div>
