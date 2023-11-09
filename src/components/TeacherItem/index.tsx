@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Importando imagens setadas como variáveis
 import whatsapp from '../../assets/images/icons/whatsapp.svg';
 
 import './styles.css';
@@ -25,9 +26,10 @@ const TeacherItem: React.FC = () => (
 
 		<footer>
 			<p>
-				Preço/hora
+				Preço/hora:
 				<strong>R$100,00</strong>
 			</p>
+
 			<button type='button'>
 				<img src={whatsapp} alt='whatsapp icon' />
 				Entrar em contato
