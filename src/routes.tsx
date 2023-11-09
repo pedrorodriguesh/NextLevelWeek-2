@@ -1,3 +1,5 @@
+// Rotas da aplicação
+
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import Landing from './pages/Landing';
 import TeacherForm from './pages/TeacherForm';
