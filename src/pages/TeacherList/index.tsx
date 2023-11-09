@@ -1,7 +1,6 @@
 import PageHeader from '../../components/PageHeader';
+import TeacherItem from '../../components/TeacherItem';
 import './styles.css';
-
-import whatsapp from '../../assets/images/icons/whatsapp.svg';
 
 function TeacherList() {
 	return (
@@ -26,33 +25,7 @@ function TeacherList() {
 			</PageHeader>
 
 			<main>
-				<article className='teacher-item'>
-					<header>
-						<img src='https://github.com/pedrorodriguesh.png' alt='Pedro Henrique' />
-						<div>
-							<strong>Pedro Henrique</strong>
-							<span>Programação</span>
-						</div>
-					</header>
-
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, voluptatibus.
-						<br />
-						<br />
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, voluptatibus.
-					</p>
-
-					<footer>
-						<p>
-							Preço/hora
-							<strong>R$100,00</strong>
-						</p>
-						<button type='button'>
-							<img src={whatsapp} alt='whatsapp icon' />
-							Whatsapp
-						</button>
-					</footer>
-				</article>
+				<TeacherItem />
 			</main>
 		</div>
 	);
