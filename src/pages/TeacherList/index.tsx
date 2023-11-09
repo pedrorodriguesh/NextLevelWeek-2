@@ -8,8 +8,10 @@ import './styles.css';
 
 function TeacherList() {
 	return (
+
 		<div id='page-teacher-list' className='container'>
 			<header className='page-header'>
+
 				<div className='top-bar-container'>
 					<Link to='/'>
 						<img src={backIcon} alt='voltar' />
@@ -21,6 +23,7 @@ function TeacherList() {
 				<div className='header-content'>
 					<strong>Estes são os proffys disponíveis.</strong>
 				</div>
+
 			</header>
 		</div>
 	);
