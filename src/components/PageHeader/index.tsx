@@ -8,23 +8,21 @@ import './styles.css';
 
 function PageHeader() {
 	return (
-		<div id='page-teacher-list' className='container'>
-			<header className='page-header'>
 
-				<div className='top-bar-container'>
-					<Link to='/'>
-						<img src={backIcon} alt='voltar' />
-					</Link>
+		<header className='page-header'>
+			<div className='top-bar-container'>
+				<Link to='/'>
+					<img src={backIcon} alt='voltar' />
+				</Link>
 
-					<img src={logoImg} alt='logo-proffy' />
-				</div>
+				<img src={logoImg} alt='logo-proffy' />
+			</div>
 
-				<div className='header-content'>
-					<strong>Estes são os proffys disponíveis.</strong>
-				</div>
+			<div className='header-content'>
+				<strong>Estes são os proffys disponíveis.</strong>
+			</div>
+		</header>
 
-			</header>
-		</div>
 	);
 }
 
