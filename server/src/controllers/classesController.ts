@@ -1,7 +1,6 @@
-import db from "../database/connection";
-import { Request, Response } from "express";
 import convertHourToMinutes from "../utils/convertHourToMinutes";
-
+import { Request, Response } from "express";
+import db from "../database/connection";
 
 interface ScheduleItem {
     week_day: number;
@@ -55,6 +54,10 @@ class ClassesController {
                 error: 'Unexpected error while creating new class'
             })
         } 
+    }
+
+    async index (req: Request, res: Response) {
+
     }
 }
 export default ClassesController
