@@ -13,6 +13,16 @@ app.get('/', (req, res) => {
     res.json(users)
 });
 
+app.post('/users', (req, res) => {
+    const users = [
+        { name: 'Pedro', age: 27},
+        { name: 'Jorge', age: 21},
+        { name: 'Joao', age: 19}
+    ]
+
+    res.json(users)
+});
+
 app.listen(PORT, () => {
     console.log(`⚡️[server]: Server is running at http://localhost:${PORT}`);
 });
