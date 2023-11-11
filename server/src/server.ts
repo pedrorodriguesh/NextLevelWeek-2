@@ -3,24 +3,12 @@ import express from 'express';
 const app = express()
 const PORT = 3030;
 
+app.use(express.json());
+
 app.get('/', (req, res) => {
-    const users = [
-        { name: 'Pedro', age: 27},
-        { name: 'Jorge', age: 21},
-        { name: 'Joao', age: 19}
-    ]
-
-    res.json(users)
-});
-
-app.post('/users', (req, res) => {
-    const users = [
-        { name: 'Pedro', age: 27},
-        { name: 'Jorge', age: 21},
-        { name: 'Joao', age: 19}
-    ]
-
-    res.json(users)
+    res.send({
+        message: 'Hello World!'
+    })
 });
 
 app.listen(PORT, () => {
