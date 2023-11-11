@@ -1,5 +1,4 @@
 // Conexão com banco de dados => SQLite3
-
 import knex from 'knex'
 import path from 'path'
 

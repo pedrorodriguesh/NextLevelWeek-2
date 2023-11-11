@@ -1,6 +1,6 @@
+import convertHourToMinutes from "../utils/convertHourToMinutes";
 import { Request, Response } from "express";
 import db from "../database/connection";
-import convertHourToMinutes from "../utils/convertHourToMinutes";
 
 interface ScheduleItem {
     week_day: number;
@@ -39,7 +39,7 @@ class ClassesController {
     async create (req: Request, res: Response) {
         const { name, avatar, whatsapp, bio, subject, cost, schedule } = req.body;
 
-        const trx = await db.transaction()
+        const trx = await db.transaction() // Transaction para garantir os inserts no banco de dados.
 
         try{
             const user = {
