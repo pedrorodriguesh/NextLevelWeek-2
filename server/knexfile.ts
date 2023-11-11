@@ -1,7 +1,7 @@
+// ### Knexfile config => DB que vai usar e o diretório de migrations.
+
 import type { Knex } from "knex";
 import path from "path";
-
-// Update with your config settings.
 
 const config: { [key: string]: Knex.Config } = {
   development: {
