@@ -15,39 +15,46 @@ class ClassesController {
 
         const trx = await db.transaction()
 
-        const user = {
-            name,
-            avatar,
-            whatsapp,
-            bio
-        }
-
-        const insertedUsersIds = await trx('users').insert(user);
-        const user_id = insertedUsersIds[0];
-
-        const classes = {
-            subject,
-            cost,
-            user_id
-        }
-
-        const insertedClassesIds = await trx('classes').insert(classes);
-        const class_id = insertedClassesIds[0];
-
-        const classSchedule = schedule.map((scheduleItem: ScheduleItem) => {
-            return {
-                class_id,
-                week_day: scheduleItem.week_day,
-                from: convertHourToMinutes(scheduleItem.from),
-                to: convertHourToMinutes(scheduleItem.to),
+        try{
+            const user = {
+                name,
+                avatar,
+                whatsapp,
+                bio
             }
-        })
-
-        await trx('class_schedule').insert(classSchedule);
-
-        await trx.commit();
-
-        return res.status(201).json({ message: 'User registered!' });
+    
+            const insertedUsersIds = await trx('users').insert(user);
+            const user_id = insertedUsersIds[0];
+    
+            const classes = {
+                subject,
+                cost,
+                user_id
+            }
+    
+            const insertedClassesIds = await trx('classes').insert(classes);
+            const class_id = insertedClassesIds[0];
+    
+            const classSchedule = schedule.map((scheduleItem: ScheduleItem) => {
+                return {
+                    class_id,
+                    week_day: scheduleItem.week_day,
+                    from: convertHourToMinutes(scheduleItem.from),
+                    to: convertHourToMinutes(scheduleItem.to),
+                }
+            })
+    
+            await trx('class_schedule').insert(classSchedule);
+    
+            await trx.commit();
+    
+            return res.status(201).json({ message: 'User registered!' });
+        } catch(err) {
+            await trx.rollback();
+            return res.status(400).json({
+                error: 'Unexpected error while creating new class'
+            })
+        } 
     }
 }
 export default ClassesController
