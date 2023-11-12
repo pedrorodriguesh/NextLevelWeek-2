@@ -22,6 +22,10 @@
     padding: 0 2.4rem;
 }
 
+#page-teacher-form main fieldset .select-wrapper + .input-wrapper{
+    margin-top: 2.4rem;
+}
+
 #page-teacher-form main fieldset legend {
     font: 700 2.4rem Archivo;
     color: var(--color-text-title);
