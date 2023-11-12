@@ -26,8 +26,19 @@ function TeacherList() {
 							{ value: 'Direito', label: 'Direito'},
 						]}
 					/>
-
-					<Input name='week_day' label='Dia da semana'/>
+					<Select 
+						name='week_day' 
+						label='Dia da semana'
+						options={[
+							{ value: '0', label: 'Domingo' },
+							{ value: '1', label: 'Segunda-Feira' },
+							{ value: '2', label: 'Terça-Feira' },
+							{ value: '3', label: 'Quarta-Feira' },
+							{ value: '4', label: 'Quinta-Feira' },
+							{ value: '5', label: 'Sexta-Feira' },
+							{ value: '6', label: 'Sábado' },
+						]}
+					/>
 					<Input name='time' label='Hora' type='time'/>
 				</form>
 			</PageHeader>

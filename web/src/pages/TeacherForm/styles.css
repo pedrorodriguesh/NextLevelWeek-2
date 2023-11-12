@@ -47,8 +47,13 @@ legend button{
     background: none;
     border: none;
     color: var(--color-primary);
-    font-weight: bolder;
+    font: 700 1.6rem Archivo;
     cursor: pointer;
+    transition: color 0.2s;
+}
+
+legend button:hover{
+    color: var(--color-primary-dark);
 }
 
 #page-teacher-form main fieldset + fieldset {
@@ -112,6 +117,16 @@ footer button:hover{
 
     .input-wrapper + .input-wrapper{
         margin-top: 1.6rem;
+    }
+
+    #page-teacher-form main .schedule-item{
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        column-gap: 1.6rem;
+    }
+
+    #page-teacher-form main .schedule-item .input-wrapper{
+        margin-top: 1.6rem !important;
     }
 
     footer{
