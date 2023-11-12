@@ -28,7 +28,10 @@ function TeacherForm() {
 				</fieldset>
 
 				<fieldset>
-					<legend>Horário</legend>
+					<legend>
+						Horário
+						<button type="button">+ Novo Horário</button>
+					</legend>
 					<Input name='subject' label='Matéria'/>
 					<Input name='cost' label='Custo da sua hora por aula'/>
 				</fieldset>
