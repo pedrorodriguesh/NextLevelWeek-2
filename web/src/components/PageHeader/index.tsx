@@ -12,7 +12,7 @@ import './styles.css';
 type PageHeaderProps = {
 	title: string;
 	children?: React.ReactNode;
-	description?: string;
+	description?: string; // ? => significa que a propriedade é opcional.
 };
 
 const PageHeader: React.FC<PageHeaderProps> = props => (

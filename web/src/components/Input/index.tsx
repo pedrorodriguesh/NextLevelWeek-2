@@ -2,6 +2,7 @@ import React, { InputHTMLAttributes } from 'react';
 
 import './styles.css';
 
+// Passando as propriedades que meu componente input pode receber.
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
     name: string;
     label: string;
