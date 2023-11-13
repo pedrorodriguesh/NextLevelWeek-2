@@ -10,6 +10,7 @@ import Textarea from '../../components/Textarea';
 import './styles.css';
 
 function TeacherForm() {
+	// Lógica para inserir novo horário => useState
 	const [schedulesItems, setSchedulesItems] = useState([
 		{ week_day: 0, from: '', to: '' }
 	]);
@@ -67,10 +68,10 @@ function TeacherForm() {
 						<button type="button" onClick={addScheduleItem}>+ Novo Horário</button>
 					</legend>
 
-					{ schedulesItems.map(scheduleItem => {
+					{ schedulesItems.map(scheduleItem => { // para cada item dentro do array schedulesItems, renderize outro. 
 						return (
 							<div key={scheduleItem.week_day} className="schedule-item">
-								<Select 
+								<Select
 									name='week_day' 
 									label='Dia da semana'
 									options={[
