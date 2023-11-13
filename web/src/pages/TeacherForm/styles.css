@@ -40,7 +40,6 @@
 
 #page-teacher-form main label{
     color: var(--color-text-complement);
-
 }
 
 legend button{
@@ -54,6 +53,10 @@ legend button{
 
 legend button:hover{
     color: var(--color-primary-dark);
+}
+
+.select-wrapper + .select-wrapper{
+    margin-top: 2.4rem;
 }
 
 #page-teacher-form main fieldset + fieldset {
