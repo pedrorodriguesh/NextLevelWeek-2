@@ -1,6 +1,7 @@
 // Rotas da aplicação
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 
+// Importando os componentes que vão ser renderizados em cada rota
 import TeacherForm from './pages/TeacherForm';
 import TeacherList from './pages/TeacherList';
 import Landing from './pages/Landing';
