@@ -39,11 +39,7 @@
         margin: 0 auto;
     }
 
-    .input-wrapper + .input-wrapper{
-        margin-top: 1.6rem;
-    }
-
-    .select-wrapper + .input-wrapper{
+    .select-wrapper + .select-wrapper{
         margin-top: 1.6rem;
     }
 }
