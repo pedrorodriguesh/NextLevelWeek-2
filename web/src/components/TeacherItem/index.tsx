@@ -20,7 +20,6 @@ interface TeacherItemProps {
 	teacher: Teacher
 }
 
-
 const TeacherItem: React.FC<TeacherItemProps> = ({ teacher }) => {
 	function createNewConnection() {
 		api.post('connections', {
