@@ -3,6 +3,8 @@ import { FormEvent, useState } from 'react';
 import Input from '../../components/Input';
 import PageHeader from '../../components/PageHeader';
 
+import api from '../../services/api';
+
 import warningIcon from '../../assets/images/icons/warning.svg';
 
 import Select from '../../components/Select';
@@ -34,6 +36,20 @@ function TeacherForm() {
 
 	function handleCreateClass(e: FormEvent) {
 		e.preventDefault();
+
+		api.post('classes', {
+			name,
+			avatar,
+			whatsapp,
+			bio,
+			subject,
+			cost: Number(cost),
+			schedule: schedulesItems
+		}).then(() => {
+			alert('Cadastro realizado com sucesso!')
+		}).catch(() => {
+			alert('Erro no cadastro!')
+		})
 
 		console.log({
 			name,
