@@ -10,6 +10,18 @@ import Textarea from '../../components/Textarea';
 import './styles.css';
 
 function TeacherForm() {
+	// Professor =>
+	const [name, setName] = useState('')
+	const [avatar, setAvatar] = useState('')
+	const [whatsapp, setWhatsapp] = useState('')
+	const [bio, setBio] = useState('')
+
+	// Aula =>
+	const [subject, setSubject] = useState('')
+	const [cost, setCost] = useState('')
+
+	console.log(name, avatar, whatsapp, bio)
+	
 	// Lógica para inserir novo horário => useState
 	const [schedulesItems, setSchedulesItems] = useState([
 		{ week_day: 0, from: '', to: '' }
@@ -32,10 +44,10 @@ function TeacherForm() {
 			<main>
 				<fieldset>
 					<legend>Seus dados</legend>
-					<Input name='name' label='Nome Completo'/>
-					<Input name='avatar' label='Avatar'/>
-					<Input name='whatsapp' label='Whatsapp'/>
-					<Textarea name='bio' label='Biografia'/>
+					<Input name='name' label='Nome Completo' onChange={(e) => setName(e.target.value)}/>
+					<Input name='avatar' label='Avatar' onChange={(e) => setAvatar(e.target.value)}/>
+					<Input name='whatsapp' label='Whatsapp' onChange={(e) => setWhatsapp(e.target.value)}/>
+					<Textarea name='bio' label='Biografia' onChange={(e) => setBio(e.target.value)}/>
 				</fieldset>
 
 				<fieldset>
