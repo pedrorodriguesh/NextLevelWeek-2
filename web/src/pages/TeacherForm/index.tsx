@@ -1,4 +1,5 @@
 import { FormEvent, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import Input from '../../components/Input';
 import PageHeader from '../../components/PageHeader';
@@ -21,6 +22,8 @@ function TeacherForm() {
 	// Aula =>
 	const [subject, setSubject] = useState('')
 	const [cost, setCost] = useState('')
+
+	const navigate = useNavigate();
 
 	function setScheduleItemValue(position: number, field: string, value: string) {
 		const updatedScheduleItems = schedulesItems.map((scheduleItem, index) => {
@@ -47,6 +50,7 @@ function TeacherForm() {
 			schedule: schedulesItems
 		}).then(() => {
 			alert('Cadastro realizado com sucesso!')
+			navigate('/')
 		}).catch(() => {
 			alert('Erro no cadastro!')
 		})
