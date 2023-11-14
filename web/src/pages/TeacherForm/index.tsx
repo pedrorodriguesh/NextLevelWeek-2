@@ -20,7 +20,10 @@ function TeacherForm() {
 	const [subject, setSubject] = useState('')
 	const [cost, setCost] = useState('')
 
-	console.log(name, avatar, whatsapp, bio)
+	// Horário =>
+	const [weekDay, setWeekDay] = useState('')
+	const [from, setFrom] = useState('')
+	const [to, setTo] = useState('')
 	
 	// Lógica para inserir novo horário => useState
 	const [schedulesItems, setSchedulesItems] = useState([
@@ -69,9 +72,10 @@ function TeacherForm() {
 							{ value: 'Programação', label: 'Programação'},
 							{ value: 'Direito', label: 'Direito'},
 						]}
+						onChange={(e) => setSubject(e.target.value)}
 					/>
 
-					<Input name='cost' label='Custo da sua hora por aula'/>
+					<Input name='cost' label='Custo da sua hora por aula' onChange={(e) => setCost(e.target.value)}/>
 				</fieldset>
 
 				<fieldset>
