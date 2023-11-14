@@ -97,6 +97,7 @@ function TeacherForm() {
 					<Select 
 						name='subject' 
 						label='Matéria'
+						value={subject}
 						options={[
 							{ value: 'Biologia', label: 'Biologia' },
 							{ value: 'Ciências', label: 'Ciências' },
