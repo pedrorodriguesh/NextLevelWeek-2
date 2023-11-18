@@ -1,4 +1,7 @@
+// Controller para a rota de aulas => ####
+
 import convertHourToMinutes from "../utils/convertHourToMinutes";
+
 import { Request, Response } from "express";
 import db from "../database/connection";
 
