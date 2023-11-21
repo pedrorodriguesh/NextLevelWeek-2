@@ -1,3 +1,4 @@
+// conexão axios para a api do backend.
 import axios from "axios";
 
 const api = axios.create({
