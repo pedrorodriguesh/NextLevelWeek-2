@@ -1,4 +1,4 @@
-// Controller para a rota de aulas => ####
+// ## Controller para a rota de aulas => ####
 
 import convertHourToMinutes from "../utils/convertHourToMinutes";
 
